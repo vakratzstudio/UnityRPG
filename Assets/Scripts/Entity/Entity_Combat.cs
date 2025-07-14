@@ -12,7 +12,7 @@ public class Entity_Combat : MonoBehaviour
     {
         foreach (var target in GetDetectedTargets())
         {
-            Entity_Health targetHealth = target.GetComponent<Entity_Health>();
+            IDamageable targetHealth = target.GetComponent<IDamageable>();
             targetHealth?.TakeDamage(demageInflicted);
 
             Entity_VFX entityVFX = target.GetComponent<Entity_VFX>();
