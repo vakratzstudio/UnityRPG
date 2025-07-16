@@ -352,6 +352,8 @@ MonoBehaviour:
   playerCheck: {fileID: 290896810}
   playerCheckDistance: 10
   playerBackCheckDistance: 1.8
+  stunnedDuration: 2
+  stunnedVelocity: {x: 7, y: 7}
   moveAnimSpeedMultiplier: 1
 --- !u!4 &290896810
 Transform:
@@ -549,7 +551,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.2746525, y: 4.9467344, z: 8.289259}
+  m_LocalPosition: {x: -15.451026, y: 4.9467344, z: 8.289259}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1918,7 +1920,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582936022}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 

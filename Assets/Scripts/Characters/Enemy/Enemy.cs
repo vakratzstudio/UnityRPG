@@ -19,11 +19,17 @@ public class Enemy : Entity
     [SerializeField] float playerCheckDistance = 10f;
     [SerializeField] float playerBackCheckDistance = 2f;
 
+    [Header("Stunned")]
+    public float stunnedDuration = 2f;
+    public Vector2 stunnedVelocity = new Vector2(7, 7f);
+    [SerializeField] protected bool canBeStunned;
+
     public Enemy_IdleState idleState;
     public Enemy_MoveState moveState;
     public Enemy_AttackState attackState;
     public Enemy_BattleState battleState;
     public Enemy_DeadState deadState;
+    public Enemy_StunnedState stunnedState;
 
     private float defaultGroundCheckDistance;
 
@@ -46,6 +52,8 @@ public class Enemy : Entity
         else
             groundCheckDistance = defaultGroundCheckDistance;
     }
+
+    public void EnableCounterWindow(bool enable) => canBeStunned = enable;
 
     public override void EntityDeath()
     {
